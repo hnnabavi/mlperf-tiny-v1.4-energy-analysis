@@ -1,0 +1,7 @@
+organization,config,status,task,period_ms,avg_power_mW,duty_cycle_pct,result_id,sheet_row
+STMicroelectronics,ST L4 120,available,SWW,17.97,24.52,56.028,1.4-0008,11.0
+STMicroelectronics,ST L4 70,available,SWW,30.84,21.56,96.138,1.4-0008-cont,12.0
+STMicroelectronics,ST U3 CM33,available,SWW,19.59,4.25,61.053,1.4-0010,14.0
+STMicroelectronics,ST U3 HSP,available,SWW,5.48,3.75,17.09,1.4-0010-cont,15.0
+STMicroelectronics,ST U385,available,SWW,19.43,3.86,60.585,1.4-0009,13.0
+Syntiant,Syntiant 21,available,SWW,0.27,0.33,3.2859,1.4-0011,16.0
