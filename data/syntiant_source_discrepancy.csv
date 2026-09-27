@@ -1,0 +1,6 @@
+result_id,task,field,sheet_value,repository_value,unit,relative_difference_pct,impact
+1.4-0011,IC,energy,112.69,109.3967,uJ/inference,3.010419875553838,available-only IC frontier remains Syntiant-only
+1.4-0011,IC,latency,37.55,22.881724366748276,ms,64.104765,available-only IC frontier remains Syntiant-only
+1.4-0011,VWW,energy,77.37,73.926,uJ/inference,4.658712766820883,repository choice strengthens Syntiant point
+1.4-0011,VWW,latency,31.1,16.78697330871244,ms,85.2627,repository choice makes Syntiant dominate ST H7A3 on available-only VWW
+1.4-0011,metadata,division,Closed-results block,Open,,,final sheet governs inclusion; discrepancy retained
