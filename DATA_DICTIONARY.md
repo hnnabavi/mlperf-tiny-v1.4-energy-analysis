@@ -1,24 +1,37 @@
 # Data dictionary
 
-## Table_S1_v14_nonstreaming_energy.csv
-- `organization`: submitting organization
-- `config`: short configuration identifier used in the manuscript
-- `status`: MLPerf availability category used in the final results sheet
-- `task`: AD, IC, IC2, KWS, or VWW
-- `latency_ms`: final-sheet latency in milliseconds
-- `metric_value`: final-sheet measured energy per inference
-- `metric_unit`: uJ/inference
-- `result_id`: final-sheet result identifier
-- `sheet_row`: source spreadsheet row number
-- `source_commit`: immutable MLCommons repository commit
-- `energy_source_path`, `performance_source_path`, `system_source_path`: source artifact paths in the pinned repository
+## data/v14_nonstreaming_core.csv
+One row per non-streaming MLPerf Tiny v1.4 task-configuration result used in the manuscript.
 
-## Table_S2_v14_streaming_power.csv
-- `avg_power_mW`: average system power for the continuous SWW service
-- `period_ms`: processing period derived from reported throughput and aligned to the final-sheet interpretation
-- `duty_cycle_pct`: reported active duty cycle in percent
-- `service_energy_uJ`: total energy accumulated over the full streaming service interval; this is not treated as per-inference energy
+- `organization`: submitting organization.
+- `config`: short configuration identifier.
+- `status`: MLPerf availability category used by the final results sheet.
+- `task`: AD, IC, IC2, KWS, or VWW.
+- `latency_ms`: final-sheet latency in milliseconds.
+- `metric_value`: measured energy per inference.
+- `result_id`: final-sheet result identifier.
+- `sheet_row`: source spreadsheet row.
 
-## Table_S10_nonstreaming_trial_repeatability.csv
-- `cv_pct`: sample coefficient of variation across repeated Energy/Inf trials
-- `max_abs_dev_from_median_pct`: largest absolute trial deviation from the within-log median
+Energy unit: microjoules per inference.
+
+## data/v14_streaming_core.csv
+Streaming wake-word results. These are intentionally not pooled with energy-per-inference data.
+
+- `period_ms`: processing period in milliseconds.
+- `avg_power_mW`: average system power in milliwatts.
+- `duty_cycle_pct`: reported active duty cycle, percent.
+- `result_id`, `sheet_row`: source identifiers.
+
+## data/repeatability_summary.csv
+Configuration-level summary of the repeated non-streaming energy trials.
+
+- `n_cells`: number of task cells represented.
+- `max_trial_cv_pct`: largest within-log coefficient of variation.
+- `median_trial_cv_pct`: median within-log coefficient of variation.
+- `max_abs_trial_deviation_pct`: largest trial deviation from the within-log median.
+
+## data/v12_syntiant_operating_points.csv
+Historical Syntiant operating-point pair used only for cross-release corroboration.
+
+## data/syntiant_source_discrepancy.csv
+Documented differences between the final v1.4 results sheet and the pinned Syntiant repository artifacts. These differences are preserved as provenance evidence and are not silently overwritten.
