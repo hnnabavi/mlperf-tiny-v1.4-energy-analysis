@@ -1,0 +1,38 @@
+organization,config,status,task,latency_ms,metric_value,result_id,sheet_row
+ASYGN,ASYGN 300,preview,AD,0.06,2.74,1.4-0012,17.0
+ASYGN,ASYGN 300,preview,IC,2.69,108.42,1.4-0012,17.0
+ASYGN,ASYGN 300,preview,IC2,16.27,679.48,1.4-0012,17.0
+ASYGN,ASYGN 300,preview,KWS,0.57,17.84,1.4-0012,17.0
+ASYGN,ASYGN 300,preview,VWW,1.63,49.65,1.4-0012,17.0
+ASYGN,ASYGN 40,preview,AD,0.43,1.27,1.4-0012-cont,18.0
+ASYGN,ASYGN 40,preview,IC,20.25,49.21,1.4-0012-cont,18.0
+ASYGN,ASYGN 40,preview,IC2,122.62,306.15,1.4-0012-cont,18.0
+ASYGN,ASYGN 40,preview,KWS,4.26,8.07,1.4-0012-cont,18.0
+ASYGN,ASYGN 40,preview,VWW,12.26,22.22,1.4-0012-cont,18.0
+STMicroelectronics,ST H7A3,available,AD,1.17,149.42,1.4-0007,10.0
+STMicroelectronics,ST H7A3,available,IC,41.68,5563.16,1.4-0007,10.0
+STMicroelectronics,ST H7A3,available,IC2,229.04,30754.1,1.4-0007,10.0
+STMicroelectronics,ST H7A3,available,KWS,11.45,1490.01,1.4-0007,10.0
+STMicroelectronics,ST H7A3,available,VWW,24.42,3197.73,1.4-0007,10.0
+STMicroelectronics,ST L4 120,available,AD,4.79,153.84,1.4-0008,11.0
+STMicroelectronics,ST L4 120,available,IC,165.65,5251.5,1.4-0008,11.0
+STMicroelectronics,ST L4 120,available,IC2,932.84,29688.07,1.4-0008,11.0
+STMicroelectronics,ST L4 120,available,KWS,43.4,1364.02,1.4-0008,11.0
+STMicroelectronics,ST L4 120,available,VWW,89.35,2885.47,1.4-0008,11.0
+STMicroelectronics,ST U3 CM33,available,AD,5.46,36.06,1.4-0010,14.0
+STMicroelectronics,ST U3 CM33,available,IC,182.68,1099.58,1.4-0010,14.0
+STMicroelectronics,ST U3 CM33,available,IC2,1024.59,6261.73,1.4-0010,14.0
+STMicroelectronics,ST U3 CM33,available,KWS,48.42,278.67,1.4-0010,14.0
+STMicroelectronics,ST U3 CM33,available,VWW,98.97,588.61,1.4-0010,14.0
+STMicroelectronics,ST U3 HSP,available,AD,3.73,39.21,1.4-0010-cont,15.0
+STMicroelectronics,ST U3 HSP,available,IC,50.0,962.94,1.4-0010-cont,15.0
+STMicroelectronics,ST U3 HSP,available,IC2,246.24,4799.16,1.4-0010-cont,15.0
+STMicroelectronics,ST U3 HSP,available,KWS,16.51,300.58,1.4-0010-cont,15.0
+STMicroelectronics,ST U3 HSP,available,VWW,37.08,650.47,1.4-0010-cont,15.0
+STMicroelectronics,ST U385,available,AD,5.38,32.29,1.4-0009,13.0
+STMicroelectronics,ST U385,available,IC,182.58,978.82,1.4-0009,13.0
+STMicroelectronics,ST U385,available,IC2,1024.59,5576.56,1.4-0009,13.0
+STMicroelectronics,ST U385,available,KWS,48.35,251.85,1.4-0009,13.0
+STMicroelectronics,ST U385,available,VWW,98.87,523.55,1.4-0009,13.0
+Syntiant,Syntiant 21,available,IC,37.55,112.69,1.4-0011,16.0
+Syntiant,Syntiant 21,available,VWW,31.1,77.37,1.4-0011,16.0
