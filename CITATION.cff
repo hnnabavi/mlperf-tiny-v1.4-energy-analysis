@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "MLPerf Tiny v1.4 energy and streaming-power analysis"
+message: "If you use this analysis package, please cite the accompanying manuscript."
+type: software
+authors:
+  - family-names: Nabavi
+    given-names: Seyed Mohammad Hossein
+  - family-names: Hajforoosh
+    given-names: Somayeh
+  - family-names: Nabavi
+    given-names: Seyed Mohammad Amin
+repository-code: "https://github.com/hnnabavi/mlperf-tiny-v1.4-energy-analysis"
+date-released: 2026-09-27
+version: "1.0.0"
+license: "NOASSERTION"
