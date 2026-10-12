@@ -23,5 +23,5 @@
 
 1. `python -m unittest -v test_audit.py` passes four core tests.
 2. `python -m unittest discover -s tests -v` passes importer tests.
-3. `python reproduce_check.py` reports matching hashes for seven frozen analytical outputs.
+3. `python reproduce_check.py` reports matching all ordered CSV cells and JSON content across seven frozen analytical outputs.
 4. Scripts and source files pass a local corruption/immutability check in the release manifest.

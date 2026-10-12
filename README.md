@@ -39,7 +39,7 @@ python -m unittest discover -s tests -v
 python reproduce_check.py
 ```
 
-Windows users may use `py -3` in place of `python`. Run the commands from the repository root. `reproduce_check.py` independently reruns the frozen audit in a temporary folder and compares its seven outputs byte-for-byte with `generated/`.
+Windows users may use `py -3` in place of `python`. Run the commands from the repository root. `reproduce_check.py` independently reruns the frozen audit in a temporary folder and compares the seven outputs with `generated/` cell-for-cell (CSV) or structurally (JSON); line endings are normalized for cross-platform reproducibility.
 
 **Optional figure generation:** install `matplotlib` and `numpy` then run `python generate_figures.py`; figure scripts are not needed to reproduce the numerical audit.
 
