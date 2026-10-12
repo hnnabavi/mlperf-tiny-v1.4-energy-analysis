@@ -1,0 +1,29 @@
+{
+  "total_source_rows": 88,
+  "nonstream_energy_rows": 73,
+  "stream_average_power_rows": 15,
+  "v14_energy_rows": 37,
+  "v14_streaming_power_rows": 6,
+  "reused_records_v12_to_v13": 6,
+  "upper_bound_distinct_files_88": 82,
+  "historical_lineage_rows": 36,
+  "historical_distinct_energy_blobs": 18,
+  "historical_reused_four_release_groups": 6,
+  "v14_ungated_vs_available_winner_changes": 5,
+  "v14_tasks_compared": 5,
+  "v13_v14_matched_cases": 8,
+  "median_abs_energy_release_change_pct": 3.379357,
+  "median_abs_latency_release_change_pct": 0.0856585,
+  "related_deadline_budget_scenarios": 164,
+  "release_selection_changes": 2,
+  "changed_scenarios_caught_by_1pct_abstention": 1,
+  "software_configuration_pairs": 8,
+  "software_pairs_inside_joint_fixed10pct": 1,
+  "rule_trigger_counts": {
+    "UNAVAILABLE_OR_UNCHECKED": 37,
+    "EXACT_REUSE": 6,
+    "DIVISION_CONFLICT": 3
+  },
+  "scope": "archival secondary benchmarking; no new hardware measurements; correlated observations",
+  "operational_claim": "No validated improvement in physical-deployment reliability"
+}

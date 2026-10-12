@@ -1,0 +1,15 @@
+{
+  "verification_date": "2026-10-10",
+  "method": "Read pinned GitHub source blobs through connected GitHub retrieval client; compare returned blob SHA identifiers to historical source ledger",
+  "scope": "two representative Syntiant task/configuration energy files across four releases; not comprehensive re-fetch of all sources",
+  "checks": [
+    {"release":"1.0","hardware":"syntiant_9120_0v9_30mhz","task":"IC","sha":"cd414cbaf4884b99177c5010742b8ee087256972","energy_uJ":101.833},
+    {"release":"1.1","hardware":"syntiant_9120_0v9_30mhz","task":"IC","sha":"cd414cbaf4884b99177c5010742b8ee087256972","energy_uJ":101.833},
+    {"release":"1.2","hardware":"syntiant_9120_0v9_30mhz","task":"IC","sha":"cd414cbaf4884b99177c5010742b8ee087256972","energy_uJ":101.833},
+    {"release":"1.3","hardware":"syntiant_9120_0v9_30mhz","task":"IC","sha":"cd414cbaf4884b99177c5010742b8ee087256972","energy_uJ":101.833},
+    {"release":"1.0","hardware":"syntiant_9120_1v1_98mhz","task":"VWW","sha":"fb4ab98f4f5a0c9f239b31ec8e0cbc832ff83e52","energy_uJ":97.164},
+    {"release":"1.1","hardware":"syntiant_9120_1v1_98mhz","task":"VWW","sha":"fb4ab98f4f5a0c9f239b31ec8e0cbc832ff83e52","energy_uJ":97.164},
+    {"release":"1.2","hardware":"syntiant_9120_1v1_98mhz","task":"VWW","sha":"fb4ab98f4f5a0c9f239b31ec8e0cbc832ff83e52","energy_uJ":97.164},
+    {"release":"1.3","hardware":"syntiant_9120_1v1_98mhz","task":"VWW","sha":"fb4ab98f4f5a0c9f239b31ec8e0cbc832ff83e52","energy_uJ":97.164}
+  ]
+}

@@ -1,0 +1,5 @@
+task,n_reported,n_distinct_files,naively_pooled_median_uJ,deduplicated_median_uJ,naive_vs_deduplicated_pct,scientific_warning
+AD,6,6,121.1491,121.1491,0.0,Not a population estimate; illustrates pseudo-replication sensitivity
+IC,10,8,1765.4129,2572.1066,-31.363,Not a population estimate; illustrates pseudo-replication sensitivity
+KWS,10,8,450.7521,660.2935,-31.735,Not a population estimate; illustrates pseudo-replication sensitivity
+VWW,10,8,936.8305,1363.4267,-31.289,Not a population estimate; illustrates pseudo-replication sensitivity

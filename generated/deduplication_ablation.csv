@@ -1,0 +1,5 @@
+task,reported_n,retained_after_documented_reuse_n,naive_median_uJ,file_dedup_median_uJ,naive_relative_difference_pct
+AD,6,6,121.1491,121.1491,0.0
+IC,10,8,1765.41295,2572.1066,-31.363
+KWS,10,8,450.7521,660.29345,-31.735
+VWW,10,8,936.83055,1363.4267,-31.289

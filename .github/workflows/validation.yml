@@ -1,0 +1,23 @@
+name: Python reproducibility audit
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9','3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and regression tests
+        run: |
+          python -m unittest -v test_audit.py
+          python -m unittest discover -s tests -v
+      - name: Frozen analytical replication
+        run: python reproduce_check.py
+      - name: Future-schema smoke test
+        run: python src/import_release.py --input examples/new_release_input.csv --release example --output /tmp/normalized_example.csv
