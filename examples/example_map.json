@@ -1,0 +1,11 @@
+{
+  "release": "release",
+  "task": "task",
+  "configuration": "configuration",
+  "metric_class": "metric_class",
+  "unit": "unit",
+  "value": "value",
+  "status": "status",
+  "source_url": "source_url",
+  "source_hash": "source_hash"
+}

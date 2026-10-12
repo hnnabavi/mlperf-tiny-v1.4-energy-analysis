@@ -1,7 +1,7 @@
 cff-version: 1.2.0
-title: "MLPerf Tiny v1.4 energy and streaming-power analysis"
-message: "If you use this analysis package, please cite the accompanying manuscript."
+message: "Please cite the matching archived software release and accompanying paper when available."
 type: software
+title: "Provenance-Aware TinyML Benchmarking: An Executable Framework for Reproducible Energy–Performance Comparisons"
 authors:
   - family-names: Nabavi
     given-names: Seyed Mohammad Hossein
@@ -10,6 +10,12 @@ authors:
   - family-names: Nabavi
     given-names: Seyed Mohammad Amin
 repository-code: "https://github.com/hnnabavi/mlperf-tiny-v1.4-energy-analysis"
-date-released: 2026-09-27
-version: "1.0.0"
-license: "NOASSERTION"
+version: "2.0.0-rc1"
+license: "Apache-2.0"
+keywords:
+  - TinyML
+  - MLPerf Tiny
+  - provenance
+  - benchmarking
+  - energy per inference
+  - reproducibility

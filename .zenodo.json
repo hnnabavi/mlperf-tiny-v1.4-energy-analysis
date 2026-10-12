@@ -1,0 +1,25 @@
+{
+  "title": "Provenance-Aware TinyML Benchmarking: Executable Audit and Reproducibility Data",
+  "creators": [
+    {
+      "name": "Nabavi, Seyed Mohammad Hossein"
+    },
+    {
+      "name": "Hajforoosh, Somayeh"
+    },
+    {
+      "name": "Nabavi, Seyed Mohammad Amin"
+    }
+  ],
+  "description": "Reproducible retrospective MLPerf Tiny energy and streaming-power provenance and comparability analysis. This release contains no new instrument measurements or validated prediction model.",
+  "keywords": [
+    "TinyML",
+    "benchmark validation",
+    "MLPerf Tiny",
+    "data provenance",
+    "energy efficiency",
+    "reproducibility"
+  ],
+  "license": "Apache-2.0",
+  "upload_type": "software"
+}

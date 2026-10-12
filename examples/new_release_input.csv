@@ -1,0 +1,3 @@
+release,task,configuration,metric_class,unit,value,status,source_url,source_hash
+example,AD,DEMO-BoardA,energy_per_inference,uJ/inference,25.0,available,https://example.org/demonstration-not-a-real-measurement,
+example,SWW,DEMO-BoardB,streaming_average_system_power,mW,2.5,preview,https://example.org/demonstration-not-a-real-measurement,

@@ -1,0 +1,6 @@
+task,all_records_n,available_records_n,ungated_winner,ungated_winner_status,ungated_energy_uJ,available_winner,available_energy_uJ,winner_changes,available_to_ungated_min_energy_ratio,interpretation
+AD,7,5,ASYGN 40,preview,1.27,ST U385,32.29,1,25.4252,"Comparison changes eligibility, NOT physical performance"
+IC,8,6,ASYGN 40,preview,49.21,Syntiant 21,112.69,1,2.28998,"Comparison changes eligibility, NOT physical performance"
+IC2,7,5,ASYGN 40,preview,306.15,ST U3 HSP,4799.16,1,15.67585,"Comparison changes eligibility, NOT physical performance"
+KWS,7,5,ASYGN 40,preview,8.07,ST U385,251.85,1,31.20818,"Comparison changes eligibility, NOT physical performance"
+VWW,8,6,ASYGN 40,preview,22.22,Syntiant 21,77.37,1,3.482,"Comparison changes eligibility, NOT physical performance"

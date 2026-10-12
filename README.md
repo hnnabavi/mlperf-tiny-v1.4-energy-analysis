@@ -1,59 +1,77 @@
-# MLPerf Tiny v1.4 energy and streaming-power analysis
+# Provenance-Aware TinyML Benchmarking
 
-Reproducibility repository for the manuscript:
+**An executable framework for reproducible energy–performance comparisons.**
 
-**Measured Energy and Streaming Power in TinyML: A Source-Pinned, Boundary-Aware Analysis of MLPerf Tiny v1.4**
+[![Python verification](https://github.com/hnnabavi/mlperf-tiny-v1.4-energy-analysis/actions/workflows/validation.yml/badge.svg)](https://github.com/hnnabavi/mlperf-tiny-v1.4-energy-analysis/actions/workflows/validation.yml)
 
-Authors: Seyed Mohammad Hossein Nabavi; Somayeh Hajforoosh; Seyed Mohammad Amin Nabavi
+This repository contains the deterministic, archival validation package associated with the manuscript **“Provenance-Aware TinyML Benchmarking: An Executable Framework for Reproducible Energy–Performance Comparisons.”** The earlier v1.4-only study remains part of this repository's history, and its earlier files (`src/reproduce_core.py`, etc.) may remain accessible as legacy analyses.
 
-## What this repository reproduces
+## What this software does
 
-This repository preserves the central datasets and deterministic analysis used in the manuscript while keeping the original MLCommons benchmark sources authoritative.
+- Separates **energy per inference** (`uJ/inference`) from **continuous streaming average power** (`mW`).
+- Maintains task boundaries (AD, IC, IC2, KWS, VWW versus SWW).
+- Records availability categories independently of measured performance.
+- Identifies **documented identical archived source files** across benchmark releases.
+- Reproduces descriptive shifts and policy-dependent minimum-energy selections.
+- Keeps conflicting official-sheet versus repository evidence explicitly labelled.
 
-- AD, IC, IC2, KWS and VWW are treated as measured **energy per inference** (uJ/inference).
-- SWW is treated separately as **average system power** (mW) for a continuous streaming service.
-- Pareto comparisons are task-specific.
-- Available-only and overall frontiers are reported separately.
-- Composition sensitivity and exact deterministic robustness radii are reproduced.
-- Five-trial energy repeatability is summarized separately from metrological uncertainty.
-- A documented Syntiant final-sheet/repository discrepancy is retained rather than silently reconciled.
+It **does not** establish new experimental energy measurements, metrological calibration, independence of different archived files, or physical-deployment reliability.
 
-## Primary sources
+## Verified input cohort and findings
 
-- MLPerf Tiny v1.4 final results sheet: https://docs.google.com/spreadsheets/d/18Wwe_AIKSjjbfThMqkji5hRoG6T4BfXd/edit
-- MLCommons v1.4 results repository pinned at commit: `467349483deb933f9259775b47d6c534a0d25da5`
-- Repository snapshot date used by the manuscript: 27 September 2026
-- Historical corroboration: MLPerf Tiny v1.2 public results repository
+| Source cohort | Reported entries | Interpretation |
+|:---|---:|:---|
+| MLPerf Tiny v1.2–v1.4 | 88 | 73 non-streaming inference energy + 15 SWW service power |
+| v1.4 | 43 | 37 inference energy + six streaming average power |
+| Historical v1.0–v1.3 artifact checks | Targeted | Six repeated Syntiant energy source files identified in four release archives |
 
-## Quick reproduction
+The v1.2–v1.3 deduplication example changes three task medians by **31.3–31.7%**; v1.4 available-only filtering changes the task-wise minimum-energy option for **5/5 non-streaming tasks**. Across eight matched ST task/board comparisons, the median absolute release energy change is **3.38%**. These are **archival descriptive results**, not prospective experimental predictions. See `generated/audit_summary.json`.
+
+## Installation and reproduction
+
+**Requirements:** Python **3.9 or newer**. The core audit uses only the Python standard library.
 
 ```bash
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
-source .venv/bin/activate
-
-pip install -r src/requirements.txt
-python src/reproduce_core.py
+# Run after cloning or downloading and extracting the repository:
+python validate_audit.py --input . --output generated
+python -m unittest -v test_audit.py
+python -m unittest discover -s tests -v
+python reproduce_check.py
 ```
 
-Outputs are written to `outputs/` and include task dispersion, Pareto frontiers, exact robustness radii, leave-one-configuration-out and leave-one-organization-out analyses, and the streaming-power frontier.
+Windows users may use `py -3` in place of `python`. Run the commands from the repository root. `reproduce_check.py` independently reruns the frozen audit in a temporary folder and compares the seven outputs with `generated/` cell-for-cell (CSV) or structurally (JSON); line endings are normalized for cross-platform reproducibility.
 
-## Core data
+**Optional figure generation:** install `matplotlib` and `numpy` then run `python generate_figures.py`; figure scripts are not needed to reproduce the numerical audit.
 
-- `data/v14_nonstreaming_core.csv`: 37 non-streaming energy-per-inference cells.
-- `data/v14_streaming_core.csv`: six streaming-wake-word average-power cells.
-- `data/repeatability_summary.csv`: configuration-level summary of the five-trial energy repeatability analysis.
-- `data/v12_syntiant_operating_points.csv`: historical Syntiant operating-point pair used for cross-release corroboration.
-- `data/syntiant_source_discrepancy.csv`: final-sheet versus pinned-repository discrepancy retained as a provenance sensitivity check.
+## Reuse on a new dataset
 
-The journal supplementary package contains the expanded row-level provenance tables and trial-level diagnostics.
+1. Consult [`docs/data_dictionary.md`](docs/data_dictionary.md) and [`docs/future_releases.md`](docs/future_releases.md).
+2. Supply a task-level input CSV such as [`examples/new_release_input.csv`](examples/new_release_input.csv).
+3. Run: `python src/import_release.py --input examples/new_release_input.csv --release example --output /tmp/example_normalized.csv`.
+4. Inspect the normalized record output and audit flags **before** using the values in cross-release comparisons. The importer **does not** automatically append unverified files to the 88-record analysis.
 
-## Interpretation constraints
+The sample contains fabricated illustrative values marked `example`, solely to demonstrate validation; **do not** cite it as measured MLPerf data. Future schema changes require a release-specific adapter and new tests.
 
-Short-run repeatability is **not** a complete measurement-uncertainty budget. Likewise, the final-sheet and pinned-repository values are treated as distinct evidence layers when they disagree.
+## Research materials
 
-## Citation
+- `reported_88_cells.csv`: curated source-aligned, release-labelled metric records.
+- `historical_source_ledger.csv`: source-path and Git blob SHA-1 lineage for selected v1.0–v1.3 artifacts.
+- `v14_nonstreaming_energy.csv`, `v14_streaming_power.csv`: separately typed v1.4 records.
+- `matched_release_v13_v14.csv`: eight retrospective matched comparisons.
+- `deadline_selection_stress.csv`: 164 **dependent budget scenarios**; not 164 experiments.
+- `software_configuration_holdout.csv`: eight software-path contrasts; not independent device replicates.
+- `generated/`: reproducibly derived outputs.
+- `docs/source_provenance.md`: original source citations, review status and documented exceptions.
+- `docs/data_dictionary.md`: column definitions and physical units.
+- `docs/future_releases.md`: validation rules for newly published MLPerf releases.
+- `docs/verification_scope.md`: evidence quality, known limits and reproducibility checks.
 
-Please cite the accompanying manuscript after publication. `CITATION.cff` describes this repository release.
+## Sources, licensing, citation
+
+The original MLPerf Tiny results were published by **MLCommons and benchmark submitters**. This repository attributes and links upstream evidence; it is **not** an original measurement campaign. See [`docs/source_provenance.md`](docs/source_provenance.md).
+
+The newly authored validation software and repository documentation are made available under **Apache-2.0** (`LICENSE`). Original upstream artifacts remain subject to their respective upstream licences and attributions; see `NOTICE`. GitHub's citation interface reads `CITATION.cff`.
+
+For scientifically exact reuse, cite the **specific version DOI** after a Zenodo archive is published. **No DOI has been assigned yet**; do not replace this statement with an invented identifier.
+
+**Research anonymity:** The repository is public and contains identifiable author information. Confirm double-blind policy before citing this author-identifiable URL inside an anonymized review manuscript.

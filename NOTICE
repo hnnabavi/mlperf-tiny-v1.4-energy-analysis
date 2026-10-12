@@ -1,0 +1,19 @@
+Provenance-Aware TinyML Benchmarking — Notices
+
+Original MLPerf Tiny benchmark datasets, measurement records and benchmark code
+are attributed to MLCommons and the contributing system submitters. Their source
+repositories include Apache License 2.0 LICENSE.md files. This software package
+includes curated selections/derived tables for scholarly verification.
+
+Official repository sources:
+- https://github.com/mlcommons/tiny
+- https://github.com/mlcommons/tiny_results_v1.0
+- https://github.com/mlcommons/tiny_results_v1.1
+- https://github.com/mlcommons/tiny_results_v1.2
+- https://github.com/mlcommons/tiny_results_v1.3
+- https://github.com/mlcommons/tiny_results_v1.4
+
+Manuscript authors: Seyed Mohammad Hossein Nabavi; Somayeh Hajforoosh; Seyed Mohammad Amin Nabavi.
+Some curated CSV tables may incorporate data subject to additional submitter notices.
+Users must check the upstream source when redistributing source artifacts.
+The 'examples' folder contains invented test rows only; not measured data.
