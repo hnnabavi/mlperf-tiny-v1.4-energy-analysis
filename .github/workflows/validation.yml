@@ -19,5 +19,7 @@ jobs:
           python -m unittest discover -s tests -v
       - name: Frozen analytical replication
         run: python reproduce_check.py
+      - name: Verify source-file integrity
+        run: sha256sum -c SHA256SUMS.txt
       - name: Future-schema smoke test
         run: python src/import_release.py --input examples/new_release_input.csv --release example --output /tmp/normalized_example.csv
